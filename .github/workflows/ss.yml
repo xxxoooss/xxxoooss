@@ -46,6 +46,7 @@ jobs:
 
               run: |      
                  curl -O https://raw.githubusercontent.com/wudongdefeng/wool/main/jcCheckin.js
+                 npm install
                  node jcCheckin.js          
               env:   
                   jcAccounts : ${{ secrets.ss_account}}
