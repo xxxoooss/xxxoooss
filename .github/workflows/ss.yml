@@ -1,49 +1,35 @@
 name: sssign
 
 on:
-
     workflow_dispatch:
-
-    
-
+    schedule:
+        - cron: "9 6 * * *" 
     watch:
-
         types: [started]
-
     repository_dispatch:
-
         types: sssign
 
 jobs:
-
     build:
-
         runs-on: ubuntu-latest
-
-        if: github.event.repository.owner.id == github.event.sender.id
-
+        
         steps:
-
             #- uses: actions/checkout@v1
-
             - name: Checkout
               uses: actions/checkout@v2 
-
                   
-
             - name: Use Node.js 14.x
               uses: actions/setup-node@v1
               with:
                   node-version: 14.15.0
-
                   
-
             - name: run
-              run: |      
-                npm install
-                node ./jcCheckin.js          
+              run: |         
+                 npm install          
+                 node jcCheckin.js
+                 
               env:   
-                jcAccounts : ${{ secrets.ss_account}}
-
+                 jcAccounts : ${{ secrets.ss_account}}
+ 
+              
                   
-
