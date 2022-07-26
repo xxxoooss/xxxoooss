@@ -40,7 +40,6 @@ jobs:
 
             - name: run
               run: |      
-                 curl -O https://raw.githubusercontent.com/wudongdefeng/wool/main/jcCheckin.js
                  npm install
                  node ./jcCheckin.js          
               env:   
