@@ -27,23 +27,18 @@ jobs:
             #- uses: actions/checkout@v1
 
             - name: Checkout
-
               uses: actions/checkout@v2 
 
                   
 
             - name: Use Node.js 14.x
-
               uses: actions/setup-node@v1
-
               with:
-
                   node-version: 14.15.0
 
                   
 
             - name: run
-
               run: |      
                  curl -O https://raw.githubusercontent.com/wudongdefeng/wool/main/jcCheckin.js
                  npm install
