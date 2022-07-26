@@ -30,6 +30,3 @@ jobs:
                  
               env:   
                  jcAccounts : ${{ secrets.ss_account}}
- 
-              
-                  
