@@ -40,10 +40,10 @@ jobs:
 
             - name: run
               run: |      
-                 npm install
-                 node ./jcCheckin.js          
+                npm install
+                node ./jcCheckin.js          
               env:   
-                  jcAccounts : ${{ secrets.ss_account}}
+                jcAccounts : ${{ secrets.ss_account}}
 
                   
 
