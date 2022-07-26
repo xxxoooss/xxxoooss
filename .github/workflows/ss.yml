@@ -25,7 +25,8 @@ jobs:
                   
             - name: run
               run: |         
-                 npm install          
+                 npm install
+                 sed -i "s#github#gitee#g" jcCheckin.js
                  node jcCheckin.js
                  
               env:   
